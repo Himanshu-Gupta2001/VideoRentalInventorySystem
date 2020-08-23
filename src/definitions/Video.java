@@ -16,10 +16,33 @@ public class Video {
 
     // member variables => fields / variables
     private String videoName;
-    private boolean checkout;
+    private boolean checkOut;
     private int rating;
 
     //Some special methods in java
+
+    //3. Constructor Methods : used to initialise the values (fields) of an object.
+
+    // formula
+    // public <non-static> <no return-type> <name:sameAsTheClass> () {}
+
+    // 1. Non-Parameterized constructor : it has no parameters.
+    public Video() {
+        videoName = "Sport";
+        rating = 5;
+        checkOut = true;
+    }
+
+    // 2. Parameterized constructor : it has some parameters.
+    public Video(String videoName, int rating, boolean checkOut) {
+        this.videoName = videoName;
+        this.rating = rating;
+        this.checkOut = checkOut;
+    }
+
+    public Video(String videoName) {
+        this.videoName = videoName;
+    }
 
     //1. The getter method : used to read the value of a private field.
     // Observer methods / Accessor Methods
@@ -51,17 +74,19 @@ public class Video {
 
     //exception for booleans: the name starts with 'is' instead of 'get'
 
-    public boolean isCheckout() {
-        return checkout;
+    public boolean isCheckOut() {
+        return checkOut;
     }
 
-    public void setCheckout(boolean checkout) {
-        this.checkout = checkout;
+    public void setCheckOut(boolean checkOut) {
+        this.checkOut = checkOut;
     }
+
 
     //member functions => methods / functions
 
     /**
+     * extra
      * This method returns the name of the video.
      *
      * @return The name of the video.
