@@ -19,6 +19,46 @@ public class Video {
     private boolean checkout;
     private int rating;
 
+    //Some special methods in java
+
+    //1. The getter method : used to read the value of a private field.
+    // Observer methods / Accessor Methods
+
+    //formula
+    //public <am:sameAsTheField> <right:sameAsTheField> get<NameOfTheField>() {}
+
+    public String getVideoName() {
+        return videoName;
+    }
+
+    //2. The setter method : used to write the value of a private field.
+    // Transformer methods / Mutator Methods
+
+    //formula
+    //public <am:sameAsTheField> void set<NameOfTheField>(<p:sameAsTheField>() {}
+
+    public void setVideoName(String videoName) {
+        this.videoName = videoName;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    //exception for booleans: the name starts with 'is' instead of 'get'
+
+    public boolean isCheckout() {
+        return checkout;
+    }
+
+    public void setCheckout(boolean checkout) {
+        this.checkout = checkout;
+    }
+
     //member functions => methods / functions
 
     /**
