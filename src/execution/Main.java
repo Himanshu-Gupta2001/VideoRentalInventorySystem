@@ -6,7 +6,6 @@
 
 package execution;
 
-
 import definitions.Video;
 
 public class Main {
@@ -18,6 +17,7 @@ public class Main {
                         himanshu.isCheckOut()
         );
         Video video = new Video("Robot");
+        System.out.println(video);
         System.out.println(
                 video.getVideoName() + ", " +
                         video.getRating() + ", " +

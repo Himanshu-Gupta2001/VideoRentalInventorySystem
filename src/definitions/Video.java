@@ -82,11 +82,19 @@ public class Video {
         this.checkOut = checkOut;
     }
 
+    //  4.The toString() method
+    public String toString() {
+        return String.format(
+                "Video Name: %s, Video Rating: %d, Is Video Available: %b",
+                getVideoName(), getRating(), isCheckOut()
+        );
+    }
+
+    //                 extra
 
     //member functions => methods / functions
 
     /**
-     * extra
      * This method returns the name of the video.
      *
      * @return The name of the video.
