@@ -18,4 +18,15 @@ public class Video {
     private String videoName;
     private boolean checkout;
     private int rating;
+
+    //member functions => methods / functions
+
+    /**
+     * This method returns the name of the video.
+     *
+     * @return The name of the video.
+     */
+    public String getName() {
+        return "";
+    }
 }
