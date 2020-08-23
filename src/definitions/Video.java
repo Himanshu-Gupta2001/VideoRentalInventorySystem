@@ -10,6 +10,14 @@ import java.util.Objects;
 
 public class Video {
 
+    //Components of a definition class in Java
+    // 1. private fields
+    // 2. getter methods for private fields
+    // 3. setter methods for private fields
+    // 4. Constructors for initializing the fields of an object
+    // 5. the toString() method
+    // 6. the equals() and the hashCode() methods
+
     /*
      * Creating Definition Classes: (Rules)
      * 1. Always set the visibility modifier of a field to private unless otherwise specified.
@@ -21,6 +29,18 @@ public class Video {
     private boolean checkOut;
     private int rating;
 
+
+    public void doCheckOut() {
+        if (!checkOut) { // if video is not checked out (available to rent)
+            setCheckOut(true);
+        }
+    }
+
+    public void doReturn() {
+        if (checkOut) {
+            setCheckOut(false);
+        }
+    }
     //Some special methods in java
 
     //3. Constructor Methods : used to initialise the values (fields) of an object.
