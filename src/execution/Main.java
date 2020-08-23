@@ -17,6 +17,31 @@ public class Main {
                         himanshu.isCheckOut()
         );
         Video video = new Video("Robot");
+        Video video5 = new Video("Robot");
+
+        //we would like to check if both the objects are equal.
+
+        /*
+         1.If both the objects are same ,i.e the reference variable are referring to the same object,or have the same hashcode.
+         */
+        /*if (video.hashCode() == video5.hashCode()) {
+            System.out.println("Equal");
+        }
+        if (video.getClass() != video5.getClass()) {
+            System.out.println("Not Equal");
+        } else {
+            if (
+                    video.getRating() == video5.getRating() &&
+                            video.isCheckOut() == video5.isCheckOut() &&
+                            video.getVideoName() == video5.getVideoName()
+            ) {
+                System.out.println("Equal");
+            }
+        }*/
+
+        //2.If both the objects are from the same class AND all the fields of the objects have same values.
+        System.out.println(video.getClass().getName());
+        System.out.println(video5.getClass().getName());
         System.out.println(video);
         System.out.println(
                 video.getVideoName() + ", " +

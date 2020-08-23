@@ -6,6 +6,8 @@
 
 package definitions;
 
+import java.util.Objects;
+
 public class Video {
 
     /*
@@ -88,6 +90,30 @@ public class Video {
                 "Video Name: %s, Video Rating: %d, Is Video Available: %b",
                 getVideoName(), getRating(), isCheckOut()
         );
+    }
+    // video.equals(video5)
+
+    // The object class is the parent class of all the other reference types in Java.
+    //i.e
+    //When we create any class in Java, it automatically inherits from the object class.
+    //video->this    and    video5->o
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Video video = (Video) o;
+        return this.isCheckOut() == video.isCheckOut() &&
+                this.getRating() == video.getRating() &&
+                Objects.equals(this.getVideoName(), video.getVideoName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getVideoName(), isCheckOut(), getRating());
     }
 
     //                 extra
