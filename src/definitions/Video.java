@@ -135,7 +135,6 @@ public class Video {
     public int hashCode() {
         return Objects.hash(getVideoName(), isCheckOut(), getRating());
     }
-
     //                 extra
 
     //member functions => methods / functions
